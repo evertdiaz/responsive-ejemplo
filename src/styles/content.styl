@@ -1,0 +1,58 @@
+.content
+	margin 64px 0 0 0
+	color black
+	
+	.container
+		.content-features
+			padding-left 0
+
+		.content-block
+			padding 1em
+			border-left 8px solid #DEDEDE
+			border-bottom 1px solid #DEDEDE
+			
+			&-title
+				font-family 'Montserrat'
+			
+			&:hover
+				background-color #DEDEDE
+			&:nth-child(1)
+				border-left-color green
+			&:nth-child(2)
+				border-left-color red
+			&:nth-child(3)
+				border-left-color blue
+			&:nth-child(4)
+				border-left-color black
+
+.content-text-image
+	.container
+		picture
+			margin 0 auto
+			img
+				width 100%
+@media (min-width:768px)
+	.container
+		width 768px
+		margin 0 auto
+		
+
+	.content
+		&-features
+			.container
+				display flex
+				justify-content space-between
+		&-block
+			width 100%
+		&-text
+			&-image
+				.container
+					
+					display flex
+					
+					picture
+						order 1
+					p
+						order 2
+						width 70%
+			

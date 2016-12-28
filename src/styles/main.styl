@@ -1,0 +1,95 @@
+@import './normalize.css'
+/* TERMINA NORMALIZE */
+@import '/reset'
+/* TERMINA RESET */
+$black = #212121
+$white = #FAFAFA
+body
+	font-size 16px
+	color $white
+	font-family 'Lato'
+	
+.header
+	font-family 'Montserrat'
+	background-color $black
+	color $white
+	height 64px
+	position fixed
+	top 0
+	left 0
+	width 100%
+	z-index 10
+	line-height 64px
+
+	&--light
+		color $black
+		background-color $white
+		ul
+			li
+				a
+					color $black
+
+	&-logo
+		order 1
+		margin-left 1rem
+	
+	&-btn-nav
+		border 0
+		border-radius 5px
+		background-color $black
+		color $white
+		order 2
+		padding 0
+		margin-right 1rem
+
+	&-mobile
+		display flex
+		list-style-type none
+		justify-content space-between
+
+	&-menu-navbar
+		background-color $black
+		
+	&-menu-list
+		height 0
+		overflow hidden
+		transition height 0.3s ease
+		
+		&--show
+			height 280px
+			
+		
+		&-item
+			a
+				text-decoration none
+				color $white
+				width 100%
+				padding-left 1.5rem
+				display block
+				
+@media (min-width: 768px)
+	.header
+		display flex
+		flex-direction row
+		flex-wrap wrap
+		justify-content space-between
+		height 80px
+		transition all .3s ease
+		line-height 80px
+
+		&-logo
+			margin-left 1.5rem
+			
+
+		&-btn-nav
+			display none
+			
+		&-menu-list
+			height 80px
+			&-item
+				display inline-block
+				a
+					padding 0 1em
+				
+@import '/video'
+@import '/content'
